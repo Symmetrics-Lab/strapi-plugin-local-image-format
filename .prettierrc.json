@@ -1,0 +1,8 @@
+{
+  "printWidth": 80,
+  "endOfLine": "lf",
+  "semi": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"]
+}
