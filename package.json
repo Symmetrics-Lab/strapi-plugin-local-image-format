@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@giscus/vue": "^3.0.0",
     "@koa/router": "^12.0.1",
     "@strapi/sdk-plugin": "^5.2.7",
     "@strapi/strapi": "^5.1.1",
