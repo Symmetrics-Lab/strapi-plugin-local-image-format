@@ -46,7 +46,7 @@ function createMiddleware(ipx: IPX, strapi: Core.Strapi) {
       "AVIF",
     ];
     let id: string;
-    let modifiers: Record<string, any>;
+    let modifiers: Record<string, unknown>;
 
     let tempFilePath: string | undefined;
     let tempTypePath: string | undefined;
@@ -175,6 +175,7 @@ function createMiddleware(ipx: IPX, strapi: Core.Strapi) {
       }
 
       ctx.body = data;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       const statusCode = parseInt(error.statusCode, 10) || 500;
       const statusMessage = error.message

@@ -36,6 +36,7 @@ const register = ({ strapi }: { strapi: Core.Strapi }) => {
     router.get(`${path}/(.*)`, createMiddleware(ipx, strapi));
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   strapi.server.use(router.routes() as any); // TODO: fix types
 };
 
