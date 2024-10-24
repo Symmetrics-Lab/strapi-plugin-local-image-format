@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 ############################
 # OS X
 ############################
@@ -69,6 +71,7 @@ $RECYCLE.BIN/
 *.log
 *.sql
 *.sqlite
+*.sqlite3
 
 
 ############################
@@ -76,9 +79,29 @@ $RECYCLE.BIN/
 ############################
 
 *#
+ssl
 .idea
 nbproject
-.vscode/
+.tsbuildinfo
+.eslintcache
+.env
+
+
+############################
+# Strapi
+############################
+
+public/uploads/*
+!public/uploads/.gitkeep
+
+
+############################
+# Build
+############################
+
+dist
+build
+.vitepress
 
 
 ############################
@@ -90,51 +113,30 @@ lcov.info
 pids
 logs
 results
-build
 node_modules
 .node_history
-package-lock.json
-**/package-lock.json
-!docs/package-lock.json
-*.heapsnapshot
+
+
+############################
+# Package managers
+############################
+
+.yarn/*
+!.yarn/cache
+!.yarn/unplugged
+!.yarn/patches
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+yarn-error.log
 
 
 ############################
 # Tests
 ############################
 
-testApp
 coverage
-cypress/screenshots
-cypress/videos
 
-
-############################
-# Documentation
-############################
-
-dist
-
-############################
-# Builds
-############################
-
-packages/generators/app/files/public/
-schema.graphql
-
-############################
-# Example app
-############################
-
-.dev
-# *.cache
-
-############################
-# Visual Studio Code
-############################
-
-front-workspace.code-workspace
-.yarn
-.yarnrc
-
-cache
+## watch:link
+.yalc
