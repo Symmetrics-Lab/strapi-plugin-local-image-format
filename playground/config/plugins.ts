@@ -1,7 +1,6 @@
 export default () => ({
   "local-image-sharp": {
     enabled: true,
-    resolve: "./node_modules/strapi-plugin-local-image-sharp",
     config: {
       paths: ["/uploads"],
       cacheDir: ".image-cache", // Can be set with env var STRAPI_PLUGIN_LOCAL_IMAGE_SHARP_CACHE_DIR

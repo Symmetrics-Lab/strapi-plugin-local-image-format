@@ -1,8 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "strapi-plugin-local-image-sharp": {
-      "signature": "ba4d056876d3bcb93eda9f6d3c73760e"
-    }
-  }
-}

@@ -13,11 +13,13 @@
   "dependencies": {
     "@strapi/plugin-cloud": "5.1.1",
     "@strapi/plugin-users-permissions": "5.1.1",
+    "@strapi/provider-upload-local": "^5.1.1",
     "@strapi/strapi": "5.1.1",
     "better-sqlite3": "11.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi-plugin-local-image-sharp": "file:.yalc/strapi-plugin-local-image-sharp",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {

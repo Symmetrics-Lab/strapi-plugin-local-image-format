@@ -45,7 +45,6 @@
     "test:ts:back": "run -T tsc -p server/tsconfig.json"
   },
   "dependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "etag": "^1.8.1",
     "ipx": "^3.0.1",
     "ohash": "^1.1.4",
@@ -60,6 +59,7 @@
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@giscus/vue": "^3.0.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@koa/router": "^12.0.1",
     "@strapi/sdk-plugin": "^5.2.7",
     "@strapi/strapi": "^5.1.1",
