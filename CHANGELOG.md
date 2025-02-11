@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.0](https://github.com/Symmetrics-Lab/strapi-plugin-local-image-format/compare/v1.7.0...v2.0.0) (2025-02-11)
+
+
+### Features
+
+* update to use Strapi v5
+* upgrade dependencies
+* forked from strapi-plugin-local-image-sharp
+
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [1.7.0](https://github.com/strapi-community/strapi-plugin-local-image-sharp/compare/v1.6.0...v1.7.0) (2023-07-31)
