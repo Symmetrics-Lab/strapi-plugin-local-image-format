@@ -95,6 +95,5 @@
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT",
-  "packageManager": "pnpm@10.3.0"
+  "license": "MIT"
 }
