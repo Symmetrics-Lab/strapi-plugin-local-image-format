@@ -36,7 +36,15 @@ This is made by [ipx](https://github.com/unjs/ipx)
 
 ## 🚚 Getting Started
 
+We need to update the docs for this fork for now you can check this documentation for the original plugin:
+
 [Read the Docs to Learn More.](https://strapi-community.github.io/strapi-plugin-local-image-sharp/)
+
+## TODO
+
+- [ ] Add documentation
+- [ ] Add tests
+- [ ] Add examples
 
 ## Contributing
 
