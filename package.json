@@ -1,6 +1,6 @@
 {
   "name": "@symlab/strapi-plugin-local-image-format",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Fork of strapi-plugin-local-image-sharp, updated to use Strapi v5. Dynamically resize, format and optimize images based on url modifiers",
   "strapi": {
     "displayName": "Local Image Format",
