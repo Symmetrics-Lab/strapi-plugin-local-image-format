@@ -79,7 +79,7 @@ STRAPI_PLUGIN_LOCAL_IMAGE_SHARP_CACHE_DIR=.image-cache yarn start
 module.exports = {
   // ...
 
-  "local-image-sharp": {
+  "local-image-format": {
     config: {
       cacheDir: ".image-cache",
     },
@@ -109,7 +109,7 @@ You can set the `Cache-Control` HTTP response header to improve the load perform
 module.exports = {
   // ...
 
-  "local-image-sharp": {
+  "local-image-format": {
     config: {
       maxAge: 31536000, // which corresponds to 1 year: 60 seconds × 60 minutes × 24 hours × 365 days = 31536000 seconds.
     },
@@ -134,7 +134,7 @@ You can set the paths in `config/plugins.js`:
 module.exports = {
   // ...
 
-  "local-image-sharp": {
+  "local-image-format": {
     config: {
       paths: ['/uploads','/custom'],
     },

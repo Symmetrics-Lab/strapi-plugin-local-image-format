@@ -1,5 +1,5 @@
 export default () => ({
-  "local-image-sharp": {
+  "local-image-format": {
     enabled: true,
     config: {
       paths: ["/uploads"],

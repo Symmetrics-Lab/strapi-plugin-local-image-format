@@ -9,10 +9,12 @@ import { createMiddleware } from "./middleware";
 
 const register = ({ strapi }: { strapi: Core.Strapi }) => {
   // register phase
-  const config = strapi.config.get("plugin::local-image-sharp") as PluginConfig;
+  const config = strapi.config.get(
+    "plugin::local-image-format"
+  ) as PluginConfig;
   const srcDir = strapi.dirs?.static?.public;
 
-  strapi.log.info(`Using Local Image Sharp plugin`);
+  strapi.log.info(`Using Local Image Format plugin`);
   strapi.log.info(`- Source directory: ${srcDir}`);
   if (config.cacheDir) {
     const currentDirectory = cwd();

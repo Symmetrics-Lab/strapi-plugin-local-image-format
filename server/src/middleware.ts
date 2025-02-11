@@ -11,7 +11,7 @@ import { decode } from "ufo";
 import { PluginConfig } from "./config/schema";
 
 function createMiddleware(ipx: IPX, strapi: Core.Strapi) {
-  const config: PluginConfig = strapi.config.get("plugin::local-image-sharp");
+  const config: PluginConfig = strapi.config.get("plugin::local-image-format");
 
   return async function ipxMiddleware(ctx: Context, next: Next) {
     let path: string = "";
@@ -81,7 +81,7 @@ function createMiddleware(ipx: IPX, strapi: Core.Strapi) {
     const objectHash = hash({ id, modifiers });
 
     // If cache enabled, check if file exists
-    if (config.cacheDir) {
+    if (config?.cacheDir) {
       tempFilePath = join(config.cacheDir, `${objectHash}.raw`);
       tempTypePath = join(config.cacheDir, `${objectHash}.mime`);
       tempEtagPath = join(config.cacheDir, `${objectHash}.etag`);
