@@ -12,7 +12,7 @@ No extra configuration needed, the modifiers will be applied based on the url.
 To install this plugin, run the following command in your Strapi project:
 
 ```bash
-yarn add strapi-plugin-local-image-sharp
+yarn add strapi-plugin-local-image-format
 ```
 
 ## Usage

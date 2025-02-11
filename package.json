@@ -1,11 +1,11 @@
 {
-  "name": "strapi-plugin-local-image-sharp",
+  "name": "strapi-plugin-local-image-format",
   "version": "2.0.0",
-  "description": "Dynamically resize, format and optimize images based on url modifiers",
+  "description": "Fork of strapi-plugin-local-image-sharp, updated to use Strapi v5. Dynamically resize, format and optimize images based on url modifiers",
   "strapi": {
-    "displayName": "Local Image Sharp",
-    "name": "local-image-sharp",
-    "description": "Dynamically resize, format and optimize images based on url modifiers",
+    "displayName": "Local Image Format",
+    "name": "local-image-format",
+    "description": "Fork of strapi-plugin-local-image-sharp, updated to use Strapi v5. Dynamically resize, format and optimize images based on url modifiers",
     "required": false,
     "kind": "plugin"
   },
@@ -48,59 +48,53 @@
     "etag": "^1.8.1",
     "ipx": "^3.0.1",
     "ohash": "^1.1.4",
-    "qs": "^6.13.0",
+    "qs": "^6.14.0",
     "ufo": "^1.5.4",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "peerDependencies": {
     "@strapi/sdk-plugin": "^5.2.7",
     "@strapi/strapi": "^5.1.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@giscus/vue": "^3.0.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
-    "@koa/router": "^12.0.1",
-    "@strapi/sdk-plugin": "^5.2.7",
-    "@strapi/strapi": "^5.1.1",
-    "@strapi/typescript-utils": "^5.1.1",
+    "@eslint/js": "^9.20.0",
+    "@giscus/vue": "^3.1.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@koa/router": "^13.1.0",
+    "@strapi/sdk-plugin": "^5.3.1",
+    "@strapi/strapi": "^5.9.0",
+    "@strapi/typescript-utils": "^5.9.0",
     "@types/eslint__js": "^8.42.3",
     "@types/etag": "^1.8.3",
     "@types/koa": "^2.15.0",
     "@types/koa__router": "^12",
-    "@types/node": "^20",
-    "@types/qs": "^6.9.16",
-    "eslint": "^9.13.0",
-    "prettier": "^3.3.3",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.11.0",
-    "vitepress": "^1.4.1"
+    "@types/node": "^22",
+    "@types/qs": "^6.9.18",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0",
+    "vitepress": "^1.6.3"
   },
   "author": {
-    "name": "Sacha Stafyniak",
-    "email": "sacha@digisquad.io",
-    "url": "https://digisquad.io"
+    "name": "Olivers De Abreu",
+    "email": "olivers@symlab.io",
+    "url": "https://symlab.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Community",
-      "url": "https://github.com/strapi-community"
-    },
-    {
-      "name": "Sacha Stafyniak",
-      "email": "sacha@digisquad.io",
-      "url": "https://digisquad.io",
-      "lead": true
+      "name": "Olivers De Abreu",
+      "url": "https://symlab.io"
     }
   ],
   "bugs": {
-    "url": "https://github.com/strapi-community/strapi-plugin-local-image-sharp/issues"
+    "url": "https://github.com/Symmetrics-Lab//strapi-plugin-local-image-format/issues"
   },
-  "homepage": "https://github.com/strapi-community/strapi-plugin-local-image-sharp",
+  "homepage": "https://github.com/Symmetrics-Lab//strapi-plugin-local-image-format",
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT",
-  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
+  "packageManager": "pnpm@10.3.0"
 }

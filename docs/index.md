@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: Local Image Sharp
+  name: Local Image Format
   text: Transform images on demand with sharp
   tagline: Dynamically resize, format and optimize images based on url modifiers.
   image:
@@ -15,5 +15,5 @@ hero:
       link: /guide/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/strapi-community/strapi-plugin-local-image-sharp
+      link: https://github.com/Symmetrics-Lab/strapi-plugin-local-image-format
 ---

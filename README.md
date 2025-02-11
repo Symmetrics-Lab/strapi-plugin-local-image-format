@@ -1,7 +1,9 @@
 <div align="center">
-<h1>Local Image Sharp</h1>
+<h1>Local Image Format</h1>
 	
 <p style="margin-top: 0;">Dynamically resize, format and optimize images based on url modifiers.</p>
+
+<p>This is a fork of <a href="https://github.com/strapi-community/strapi-plugin-local-image-sharp">strapi-plugin-local-image-sharp</a> updated to use Strapi v5.</p>
 	
 <p>
   <a href="https://discord.strapi.io">
@@ -38,10 +40,8 @@ This is made by [ipx](https://github.com/unjs/ipx)
 
 ## Contributing
 
-I/We are actively looking for contributors, maintainers, and others to help shape this package. As this plugins sole purpose within the Strapi community is to be used by other developers and plugin maintainers to get fast responses time.
-
-If interested please feel free to email the lead maintainer Sacha at: sacha@digisquad.io or ping `stf#3254` on Discord.
+If you want to contribute to this project, please feel free to open a PR.
 
 ## License
 
-See the [LICENSE](./LICENSE.md) file for licensing information.
+MIT License. See the [LICENSE](./LICENSE.md) file for licensing information.
