@@ -1,4 +1,4 @@
-name: docs
+name: Create and deploy docs
 
 on:
   # trigger deployment on push to main branch and if docs/ is updated
@@ -9,21 +9,33 @@ on:
   # trigger deployment manually
   workflow_dispatch:
 
-jobs:
-  docs:
-    runs-on: ubuntu-latest
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
+# Allow only one concurrent deployment
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           # fetch all commits to get last updated time or other git log info
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           # choose node.js version to use
-          node-version: "14"
+          node-version: 20
+          cache: yarn
 
       # cache node_modules
       - name: Cache dependencies
@@ -39,21 +51,28 @@ jobs:
       # install dependencies if the cache did not hit
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile
+        run: yarn install --frozen-lockfile
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       # run build script
       - name: Build VitePress site
         run: yarn docs:build
 
-      # please check out the docs of the workflow for more details
-      # @see https://github.com/crazy-max/ghaction-github-pages
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          # deploy to gh-pages branch
-          target_branch: gh-pages
-          # deploy the default output dir of VitePress
-          build_dir: docs/.vitepress/dist
-        env:
-          # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: docs/.vitepress/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
