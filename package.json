@@ -1,6 +1,6 @@
 {
   "name": "@symlab/strapi-plugin-local-image-format",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Fork of strapi-plugin-local-image-sharp, updated to use Strapi v5. Dynamically resize, format and optimize images based on url modifiers",
   "strapi": {
     "displayName": "Local Image Format",
@@ -46,30 +46,30 @@
   },
   "dependencies": {
     "etag": "^1.8.1",
-    "ipx": "^3.0.3",
+    "ipx": "^3.1.1",
     "ohash": "^2.0.11",
     "qs": "^6.14.0",
     "ufo": "^1.6.1",
-    "zod": "^4.0.5"
+    "zod": "^4.0.10"
   },
   "peerDependencies": {
     "@strapi/sdk-plugin": "^5.2.7",
     "@strapi/strapi": "^5.1.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.31.0",
+    "@eslint/js": "^9.32.0",
     "@giscus/vue": "^3.1.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.5.1",
     "@koa/router": "^13.1.1",
     "@strapi/sdk-plugin": "^5.3.2",
-    "@strapi/strapi": "^5.18.1",
-    "@strapi/typescript-utils": "^5.18.1",
+    "@strapi/strapi": "^5.19.0",
+    "@strapi/typescript-utils": "^5.19.0",
     "@types/etag": "^1.8.4",
     "@types/koa": "^2.15.0",
     "@types/koa__router": "^12",
     "@types/node": "^24",
     "@types/qs": "^6.14.0",
-    "eslint": "^9.31.0",
+    "eslint": "^9.32.0",
     "prettier": "^3.6.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
