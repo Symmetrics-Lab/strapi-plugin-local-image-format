@@ -64,7 +64,7 @@
     "h3": "^1.15.11"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.4",
+    "@eslint/js": "^10.0.1",
     "@giscus/vue": "^3.1.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@koa/router": "^13.1.1",
