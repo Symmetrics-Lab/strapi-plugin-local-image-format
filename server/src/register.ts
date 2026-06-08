@@ -1,5 +1,5 @@
 import { existsSync, mkdirSync } from "node:fs";
-import { resolve } from "node:path";
+import { resolve, sep } from "node:path";
 import { cwd } from "node:process";
 import Router from "@koa/router";
 import { Core } from "@strapi/strapi";
@@ -19,7 +19,12 @@ const register = ({ strapi }: { strapi: Core.Strapi }) => {
   if (config.cacheDir) {
     const currentDirectory = cwd();
     config.cacheDir = resolve(currentDirectory, config.cacheDir);
-    if (config.cacheDir.startsWith(srcDir)) {
+    // Compare with a trailing separator so a sibling like "public-cache" is not
+    // treated as living inside "public".
+    if (
+      srcDir &&
+      (config.cacheDir === srcDir || config.cacheDir.startsWith(srcDir + sep))
+    ) {
       throw new Error("Cache directory cannot be inside source directory");
     }
     // check if directory exists

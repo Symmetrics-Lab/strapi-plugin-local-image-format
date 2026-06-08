@@ -6,6 +6,7 @@ export default {
   default: ({ env }: { env: any }) => ({
     cacheDir: env("STRAPI_PLUGIN_LOCAL_IMAGE_SHARP_CACHE_DIR", ""),
     maxAge: 3600,
+    maxDimension: 4000,
     paths: ["/uploads"],
   }),
   validator(config: unknown) {

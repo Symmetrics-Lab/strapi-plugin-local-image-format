@@ -9,19 +9,15 @@ import { hash } from "ohash";
 import qs from "qs";
 import { decode } from "ufo";
 import { PluginConfig } from "./config/schema";
+import { exceedsMaxDimension, stripMountPath } from "./request";
 
 function createMiddleware(ipx: IPX, strapi: Core.Strapi) {
   const config: PluginConfig = strapi.config.get("plugin::local-image-format");
 
   return async function ipxMiddleware(ctx: Context, next: Next) {
-    let path: string = "";
-    config.paths.forEach((target) => {
-      if (ctx.req?.url?.includes(target)) {
-        path = ctx.req.url.split(target).join("");
-      }
-    });
+    const path = stripMountPath(ctx.req?.url, config.paths);
 
-    if (!path) {
+    if (path === null) {
       const statusCode = 500;
       const statusMessage = "No path found";
       strapi.log.debug(statusMessage);
@@ -75,6 +71,16 @@ function createMiddleware(ipx: IPX, strapi: Core.Strapi) {
       !allowedTypes.includes(id.split(".").pop()?.toUpperCase() || "")
     ) {
       await next();
+      return;
+    }
+
+    // Reject oversized resize requests before sharp allocates the canvas, to
+    // avoid memory-exhaustion DoS from attacker-controlled dimensions.
+    if (exceedsMaxDimension(modifiers, config.maxDimension)) {
+      strapi.log.debug(
+        `Requested dimensions exceed maxDimension (${config.maxDimension})`
+      );
+      ctx.status = 400;
       return;
     }
 
@@ -134,7 +140,7 @@ function createMiddleware(ipx: IPX, strapi: Core.Strapi) {
             return;
           }
         }
-        ctx.set("Last-Modified", `${+src.mtime}`);
+        ctx.set("Last-Modified", new Date(src.mtime).toUTCString());
       }
 
       const maxAge = src.maxAge ?? config.maxAge;
