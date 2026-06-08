@@ -42,38 +42,46 @@
     "watch": "strapi-plugin watch",
     "watch:link": "strapi-plugin watch:link",
     "verify": "strapi-plugin verify",
-    "test:ts:back": "run -T tsc -p server/tsconfig.json"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ts:back": "tsc -p server/tsconfig.json --noEmit"
   },
   "dependencies": {
     "etag": "^1.8.1",
     "ipx": "^3.1.1",
-    "ohash": "^2.0.11",
-    "qs": "^6.14.0",
-    "ufo": "^1.6.1",
-    "zod": "^4.0.10"
+    "ohash": "^1.1.6",
+    "qs": "^6.15.2",
+    "ufo": "^1.6.4",
+    "zod": "^4.4.3"
   },
   "peerDependencies": {
     "@strapi/sdk-plugin": "^5.2.7",
     "@strapi/strapi": "^5.1.1"
   },
+  "overrides": {
+    "svgo": "^4.0.1",
+    "node-forge": "^1.4.0",
+    "h3": "^1.15.11"
+  },
   "devDependencies": {
-    "@eslint/js": "^9.32.0",
+    "@eslint/js": "^9.39.4",
     "@giscus/vue": "^3.1.1",
-    "@ianvs/prettier-plugin-sort-imports": "^4.5.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@koa/router": "^13.1.1",
-    "@strapi/sdk-plugin": "^5.3.2",
-    "@strapi/strapi": "^5.19.0",
-    "@strapi/typescript-utils": "^5.19.0",
+    "@strapi/sdk-plugin": "^5.4.0",
+    "@strapi/strapi": "^5.47.1",
+    "@strapi/typescript-utils": "^5.47.1",
     "@types/etag": "^1.8.4",
-    "@types/koa": "^2.15.0",
-    "@types/koa__router": "^12",
+    "@types/koa": "^2.15.2",
+    "@types/koa__router": "^12.0.5",
     "@types/node": "^24",
-    "@types/qs": "^6.14.0",
-    "eslint": "^9.32.0",
-    "prettier": "^3.6.2",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0",
-    "vitepress": "^1.6.3"
+    "@types/qs": "^6.15.1",
+    "eslint": "^9.39.4",
+    "prettier": "^3.8.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.60.1",
+    "vitepress": "^1.6.4",
+    "vitest": "^3.2.6"
   },
   "author": {
     "name": "Olivers De Abreu",
@@ -87,11 +95,11 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/Symmetrics-Lab//strapi-plugin-local-image-format/issues"
+    "url": "https://github.com/Symmetrics-Lab/strapi-plugin-local-image-format/issues"
   },
-  "homepage": "https://github.com/Symmetrics-Lab//strapi-plugin-local-image-format",
+  "homepage": "https://github.com/Symmetrics-Lab/strapi-plugin-local-image-format",
   "engines": {
-    "node": ">=18.0.0 <=22.x.x",
+    "node": ">=20.0.0",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

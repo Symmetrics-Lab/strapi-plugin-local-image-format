@@ -1,0 +1,19 @@
+# Dependabot config for @symlab/strapi-plugin-local-image-format.
+# Only the root package is published (files: ["dist"]); the playground is a
+# throwaway Strapi test app and is intentionally not watched here.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    # Group the noisy dev/build toolchain so it lands in a single PR instead of
+    # one per package. Runtime deps (etag, ipx, ohash, qs, ufo, zod) stay
+    # ungrouped so security-relevant bumps are reviewed on their own.
+    groups:
+      dev-toolchain:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"

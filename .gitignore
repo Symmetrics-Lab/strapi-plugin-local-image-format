@@ -131,6 +131,11 @@ node_modules
 .pnp.*
 yarn-error.log
 
+# Lockfiles are not committed: this is a published library (consumers ignore a
+# dependency's lockfile) and the playground is a throwaway test app. Keeping them
+# out of git scopes Dependabot's graph to the declared manifests.
+package-lock.json
+
 
 ############################
 # Tests
