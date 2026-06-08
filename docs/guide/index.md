@@ -99,6 +99,14 @@ When providing a relative path, it will be resolved from the root of your projec
 Don't forget to add `.image-cache` to your `.gitignore` file.
 :::
 
+::: warning
+The cache has no built-in eviction: every unique combination of image + modifiers
+writes a file and it is never removed automatically. On a public endpoint this can
+grow unbounded (each distinct `?width=…` is a new entry). Put the `cacheDir` under
+external cleanup — a scheduled job, `tmpreaper`/`logrotate`, or a container volume
+with a size limit — or front the endpoint with a CDN so the cache stays warm-but-bounded.
+:::
+
 ### `maxAge`
 
 You can set the `Cache-Control` HTTP response header to improve the load performance. It's a good practice cache static resources using HTTP caching. [See more here](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl)
@@ -137,6 +145,31 @@ module.exports = {
   "local-image-format": {
     config: {
       paths: ['/uploads','/custom'],
+    },
+  },
+
+  // ...
+};
+```
+
+### `maxDimension`
+
+Upper bound (in pixels) for any single resize dimension (`width`, `height`, or
+`size`). Requests asking for a larger dimension are rejected with `400` before
+sharp allocates the canvas, which guards against memory-exhaustion from
+attacker-controlled URLs.
+
+> _Defaults to `4000`._
+
+```js [config/plugins.js]
+"use strict";
+
+module.exports = {
+  // ...
+
+  "local-image-format": {
+    config: {
+      maxDimension: 4000,
     },
   },
 

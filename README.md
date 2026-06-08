@@ -9,11 +9,11 @@
   <a href="https://discord.strapi.io">
     <img src="https://img.shields.io/discord/811989166782021633?color=blue&label=strapi-discord" alt="Strapi Discord">
   </a>
-  <a href="https://www.npmjs.org/package/strapi-plugin-local-image-sharp">
-    <img src="https://img.shields.io/npm/v/strapi-plugin-local-image-sharp/latest.svg" alt="NPM Version" />
+  <a href="https://www.npmjs.com/package/@symlab/strapi-plugin-local-image-format">
+    <img src="https://img.shields.io/npm/v/@symlab/strapi-plugin-local-image-format/latest.svg" alt="NPM Version" />
   </a>
-  <a href="https://www.npmjs.org/package/strapi-plugin-local-image-sharp">
-    <img src="https://img.shields.io/npm/dm/strapi-plugin-local-image-sharp" alt="Monthly download on NPM" />
+  <a href="https://www.npmjs.com/package/@symlab/strapi-plugin-local-image-format">
+    <img src="https://img.shields.io/npm/dm/@symlab/strapi-plugin-local-image-format" alt="Monthly download on NPM" />
   </a>
 </p>
 </div>
@@ -43,7 +43,7 @@ We need to update the docs for this fork for now you can check this documentatio
 ## TODO
 
 - [ ] Add documentation
-- [ ] Add tests
+- [x] Add tests
 - [ ] Add examples
 
 ## Contributing
