@@ -1,5 +1,27 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.1.0](https://github.com/Symmetrics-Lab/strapi-plugin-local-image-format/compare/v2.0.5...v2.1.0) (2026-06-08)
+
+
+### Features
+
+* `maxDimension` config option (default `4000`) that rejects oversized resize requests with `400` before sharp allocates the canvas, guarding against memory-exhaustion DoS
+
+### Bug Fixes
+
+* harden image middleware against DoS and fix conditional caching ([7e80c08](https://github.com/Symmetrics-Lab/strapi-plugin-local-image-format/commit/7e80c0880bd76625c5e28850f49f53736e06ac7b))
+* pin `ohash` to `^1.1.6`: 2.x is ESM-only and broke Strapi's `require()`, so the plugin failed to load on a clean install
+* emit a valid HTTP-date `Last-Modified` header instead of epoch milliseconds
+* prefix-based mount-path matching (no mid-URL or sibling-path false matches)
+
+### Security / Dependencies
+
+* resolve dependency advisories on the published surface (`npm audit --omit=dev` 6 → 1); bump `qs`, add overrides for `svgo`/`node-forge`/`h3`
+* stop committing lockfiles to scope Dependabot's dependency graph to declared manifests
+* require Node `>=20` (modern Strapi relies on `Array.prototype.toSorted`)
+
 ## [2.0.0](https://github.com/Symmetrics-Lab/strapi-plugin-local-image-format/compare/v1.7.0...v2.0.0) (2025-02-11)
 
 
