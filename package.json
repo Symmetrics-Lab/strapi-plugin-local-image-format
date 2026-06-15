@@ -68,7 +68,7 @@
     "@giscus/vue": "^3.1.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@koa/router": "^13.1.1",
-    "@strapi/sdk-plugin": "^5.4.0",
+    "@strapi/sdk-plugin": "^6.1.1",
     "@strapi/strapi": "^5.47.1",
     "@strapi/typescript-utils": "^5.47.1",
     "@types/etag": "^1.8.4",
