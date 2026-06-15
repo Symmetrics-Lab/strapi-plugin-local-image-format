@@ -74,7 +74,7 @@
     "@types/etag": "^1.8.4",
     "@types/koa": "^2.15.2",
     "@types/koa__router": "^12.0.5",
-    "@types/node": "^24",
+    "@types/node": "^25",
     "@types/qs": "^6.15.1",
     "eslint": "^9.39.4",
     "prettier": "^3.8.3",
