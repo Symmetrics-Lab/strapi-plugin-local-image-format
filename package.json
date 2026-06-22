@@ -81,7 +81,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.60.1",
     "vitepress": "^1.6.4",
-    "vitest": "^3.2.6"
+    "vitest": "^4.1.9"
   },
   "author": {
     "name": "Olivers De Abreu",
