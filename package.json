@@ -67,7 +67,7 @@
     "@eslint/js": "^9.39.4",
     "@giscus/vue": "^3.1.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
-    "@koa/router": "^13.1.1",
+    "@koa/router": "^15.7.0",
     "@strapi/sdk-plugin": "^5.4.0",
     "@strapi/strapi": "^5.47.1",
     "@strapi/typescript-utils": "^5.47.1",
